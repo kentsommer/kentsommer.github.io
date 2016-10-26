@@ -7,7 +7,7 @@
     <meta name="author" content="map[]" />
     <meta name="description" content="Personal Blog that is supposed to be here to help make my life easier...">
     <link rel="favicon" href="https://kentsommer.github.io/img/favicon.ico">
-    <title>Getting Started with Hugo</title>
+    <title>The Curious Case of Dunkin Doughnuts</title>
     <meta name="generator" content="Hugo 0.17" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://kentsommer.github.io/css/main.css" /><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/tomorrow.min.css">
@@ -52,122 +52,38 @@
       <div class="container">
         <div class="blog-post">
           <h3>
-            <strong><a href="https://kentsommer.github.io/blog/hugoisforlovers/">Getting Started with Hugo</a></strong>
+            <strong><a href="https://kentsommer.github.io/blog/the-curious-case-of-dunkin-doughnuts/">The Curious Case of Dunkin Doughnuts</a></strong>
           </h3>
         </div>
         <div class="blog-title">
           <h4>
-          April 2, 2014
+          August 23, 2016
             &nbsp;&nbsp;
-            
-            <span class="label label-success">go</span>
-            
-            <span class="label label-success">golang</span>
-            
-            <span class="label label-success">hugo</span>
-            
-            <span class="label label-success">development</span>
             
           </h4>
         </div>
         <div class="panel panel-default">
           <div class="panel-body">
             <div class="blogpost">
-              
+              <p>It&rsquo;s 8:45 in the morning, sweat is already dripping down my back as the heat from the past few weeks still hasn&rsquo;t cleared. Suddenly a familiar but unplaceable tune starts playing over the subway station speakers signaling that the train is almost here. As I, and everyone else, are jostled into place by the crowed moving onto the train I realize I haven&rsquo;t had breakfast yet. Where do I finally end up you might ask? Well&hellip; Dunkin Doughnuts of course! Now I know what you are all probably thinking&hellip; Dunkin Doughnuts isn&rsquo;t that great and in fact, may earn the title of pretty stinking bad. So, why would you go to the trouble?. Well, here is a little secret, it has basically nothing in common with the US version of the same store (other than both selling coffee and some semblance of treats). The doughnuts are actually delicious unlike their US counterparts, and the coffee is something comparable to Starbucks (that is to say not fantastic, but certainly not bad). How the US ended up with the subpar version is beyond me and to be honest rather outside of the scope of this blog, however, it does make you wonder.</p>
 
-<h2 id="step-1-install-hugo">Step 1. Install Hugo</h2>
+<p>While I did have a blast meandering around coffee shops and visiting a few popular places in Seoul, most of my time was spent on much less interesting topics like paperwork&hellip; That being said, as of about six hours ago from publishing time of this post, I have finally been approved for my Alien Registration Card! It won&rsquo;t come for another 2-3 weeks, but it is a huge burden off my back knowing that it is finished.</p>
 
-<p>Goto <a href="https://github.com/spf13/hugo/releases">hugo releases</a> and download the
-appropriate version for your os and architecture.</p>
+<p>I&rsquo;m now a little under one week out from my arrival on campus at KAIST. I am very grateful for the time I got to spend in Seoul before I start my time as a student again. I know I touched on this topic during my very first post, but it is pretty crazy to think about how I ended up here. Everything has happened in what has felt like the blink of an eye, and while some of it has been stressful the majority of moments leading up to this point have been overwhelmingly positive. Never in my wildest dreams would I have expected to end up where I am now only three short years ago. Over the past few days, the strange (or rather illogical) feeling of wanted to go back to school has started kicking in. Without work or something to keep me busy, I think I get a bit lost&hellip; So, while this break before school has been good, I am definitely ready to get back up and running again (both figuratively as well as actually physically running). I have a solid idea for my thesis, work lined up during my breaks (most likely),  and a whole lot of energy to push through the first 5 months of school with.</p>
 
-<p>Save it somewhere specific as we will be using it in the next step.</p>
+<p>Till next time folks!</p>
 
-<p>More complete instructions are available at <a href="/overview/installing/">installing hugo</a></p>
+<p>Also, if you haven&rsquo;t already seen it, feel free to check out the house tour I put up on Youtube of the place I&rsquo;m staying at in Seoul (video in this post)! Also please let me know if there is anything specific you would like to see and I will do my best to capture it and put it up!</p>
 
-<h2 id="step-2-build-the-docs">Step 2. Build the Docs</h2>
 
-<p>Hugo has its own example site which happens to also be the documentation site
-you are reading right now.</p>
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/AlltdoHwlhw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+ </div>
 
-<p>Follow the following steps:</p>
-
-<ol>
-<li>Clone the <a href="http://github.com/spf13/hugo">hugo repository</a></li>
-<li>Go into the repo</li>
-<li>Run hugo in server mode and build the docs</li>
-<li>Open your browser to <a href="http://localhost:1313">http://localhost:1313</a></li>
-</ol>
-
-<p>Corresponding pseudo commands:</p>
-
-<pre><code>git clone https://github.com/spf13/hugo
-cd hugo
-/path/to/where/you/installed/hugo server --source=./docs
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 27 ms
-&gt; Web Server is available at http://localhost:1313
-&gt; Press ctrl+c to stop
-</code></pre>
-
-<p>Once you&rsquo;ve gotten here, follow along the rest of this page on your local build.</p>
-
-<h2 id="step-3-change-the-docs-site">Step 3. Change the docs site</h2>
-
-<p>Stop the Hugo process by hitting ctrl+c.</p>
-
-<p>Now we are going to run hugo again, but this time with hugo in watch mode.</p>
-
-<pre><code>/path/to/hugo/from/step/1/hugo server --source=./docs --watch
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 27 ms
-&gt; Web Server is available at http://localhost:1313
-&gt; Watching for changes in /Users/spf13/Code/hugo/docs/content
-&gt; Press ctrl+c to stop
-</code></pre>
-
-<p>Open your <a href="http://vim.spf13.com">favorite editor</a> and change one of the source
-content pages. How about changing this very file to <em>fix the typo</em>. How about changing this very file to <em>fix the typo</em>.</p>
-
-<p>Content files are found in <code>docs/content/</code>. Unless otherwise specified, files
-are located at the same relative location as the url, in our case
-<code>docs/content/overview/quickstart.md</code>.</p>
-
-<p>Change and save this file.. Notice what happened in your terminal.</p>
-
-<pre><code>&gt; Change detected, rebuilding site
-
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 26 ms
-</code></pre>
-
-<p>Refresh the browser and observe that the typo is now fixed.</p>
-
-<p>Notice how quick that was. Try to refresh the site before it&rsquo;s finished building.. I double dare you.
-Having nearly instant feedback enables you to have your creativity flow without waiting for long builds.</p>
-
-<h2 id="step-4-have-fun">Step 4. Have fun</h2>
-
-<p>The best way to learn something is to play with it.</p>
 
               <hr>
               <div class="related-posts">
                 <h5>Related Posts</h5>
-                
-                  <div class="row">
-                    <div class="col-sm-4 col-md-4 col-lg-4">
-                      <h6 style="text-align: right">
-                        April 2, 2014
-                      </h6>
-                    </div>
-                    <div class="col-sm-8 col-md-8 col-lg-8">
-                      <h6 style="text-align: left">
-                        <strong><a href="/blog/goisforlovers/">(Hu)go Template Primer</a></strong>
-                      </h6>
-                    </div>
-                  </div>
                 
               </div>
             </div>
