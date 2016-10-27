@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kent Sommer</title>
-    <link>https://kentsommer.github.io/index.xml</link>
+    <link>https://kentsommer.xyz/index.xml</link>
     <description>Recent content on Kent Sommer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Sun, 02 Oct 2016 22:55:05 -0400</lastBuildDate>
-    <atom:link href="https://kentsommer.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kentsommer.xyz/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Projects</title>
-      <link>https://kentsommer.github.io/projects/1/</link>
+      <link>https://kentsommer.xyz/projects/1/</link>
       <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
       
-      <guid>https://kentsommer.github.io/projects/1/</guid>
+      <guid>https://kentsommer.xyz/projects/1/</guid>
       <description>&lt;p&gt;TEST&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Projects</title>
-      <link>https://kentsommer.github.io/projects/</link>
+      <link>https://kentsommer.xyz/projects/</link>
       <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
       
-      <guid>https://kentsommer.github.io/projects/</guid>
+      <guid>https://kentsommer.xyz/projects/</guid>
       <description>&lt;section id=&#34;projects&#34;&gt;
   &lt;div class=&#34;container&#34;&gt;
     &lt;h3&gt;Projects&lt;/h3&gt;
@@ -60,10 +60,10 @@
     
     <item>
       <title>Tensors, Baseball, and a whole lot of fun</title>
-      <link>https://kentsommer.github.io/blog/tensors-baseball-fun/</link>
+      <link>https://kentsommer.xyz/blog/tensors-baseball-fun/</link>
       <pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://kentsommer.github.io/blog/tensors-baseball-fun/</guid>
+      <guid>https://kentsommer.xyz/blog/tensors-baseball-fun/</guid>
       <description>&lt;p&gt;It has taken a while for me to really feel settled in here, but I think I&amp;rsquo;ve finally crossed that line and I&amp;rsquo;m starting to feel really blessed to be here.&lt;/p&gt;
 
 &lt;p&gt;The last couple weeks have been an absolute blast and given the fact that I basically get to build cool things every day, so should the rest of my time here. As far as classes go&amp;hellip; I can&amp;rsquo;t really pick out many differences so far compared to the structure of similar graduate level courses in the US. Perhaps in some classes, there is a bit more emphasis on fact memorization, but even that seems to be within the bounds of normal. I&amp;rsquo;ve mentioned this to a few people now whenever they ask what the big differences between the US and Korea are, but it is actually really hard to say. Once you step off the plane, everything is so radically different and yet so easy to become accustomed to that you hardly realize the changes in lifestyle or cultural behavior. In that sense, I think Korea is a great tourist destination not because it is easy to get around without knowing the language (it isn&amp;rsquo;t&amp;hellip; it is actually pretty hard), but simply because you get used to the radical differences extremely quickly.&lt;/p&gt;
@@ -76,7 +76,7 @@
 
 &lt;p&gt;This library is not dissimilar to other machine learning libraries such as Caffe, Theano, etc., however, since it is new and probably most importantly required for use in a homework assignment, it is the library I am using at the moment. Machine learning has recently gotten a lot of attention in the area of Computer Vision for achieving really awesome results for tasks such as object/place recognition, and image captioning. My foray into TensorFlow (due to the homework assignment) has been focused on image retrieval using CNN (Convolutional Neural Network) features. Given a pre-trained VGG16 network as shown here:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://kentsommer.github.io/postimgs/vgg16.png&#34; alt=&#34;alt text&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://kentsommer.xyz/postimgs/vgg16.png&#34; alt=&#34;alt text&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;If you use the second 1x1x4096 fully connected layer (fc2) as a feature vector on a given query image, and then again pull out the fc2 feature vector on each image in some set that is known to contain similar or identical images (even those taken at different angles or scales), it becomes possible to match the feature vectors (using some similarity measurement) and retrieve pictures of the same image or similar ones. While this approach is naive, and if running solely on a CPU it is also stupidly slow (for 250 query images and a test set of 1000 it takes 29.86 hours to run), it still manages to achieve very acceptable results. Do note, this would be orders of magnitude faster given a GPU with enough vRAM, however, my measly 2GB card runs out of memory on this task. All of that being said, the precision achieved is actually impressive. It is able to achieve 92% accuracy when trying to match the closest 4 images in the test dataset to some image category in the query dataset.&lt;/p&gt;
 
@@ -96,10 +96,10 @@
     
     <item>
       <title>Reality Sets In</title>
-      <link>https://kentsommer.github.io/blog/reality-sets-in/</link>
+      <link>https://kentsommer.xyz/blog/reality-sets-in/</link>
       <pubDate>Wed, 31 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://kentsommer.github.io/blog/reality-sets-in/</guid>
+      <guid>https://kentsommer.xyz/blog/reality-sets-in/</guid>
       <description>&lt;p&gt;Well, I&amp;rsquo;m finally here. I think often I let myself get caught up in the negative aspects of a new place or experience so in this post I will focus on everything good here at KAIST so far. The transition to living in a dorm after having my own space for the better part of my life has actually been very smooth so far. I have an awesome roommate, and the dorm facilities are clean and bright. Sadly, this dorm does not have private bathrooms or showers, however, the shared spaces that it does have are very nice. Cafeteria food is good and extremely cheap (3,000 - 4,000 krw / $2.8-$3.7 per meal), and while it definitely isn&amp;rsquo;t restaurant living, it is cheaper than any comparable meal I could make myself.&lt;/p&gt;
 
 &lt;p&gt;The weather has been particularly wonderful the past couple of days as orientation has come and gone. Speaking of which, the orientation program was very well put together and provided a great balance of important necessary information as well as campus life improvement tips. It also consisted of talking with a few different current M.S. and Ph.D. students which was very helpful while remaining borderline terrifying. Moving forward, I think the most important aspect for me will be making sure to carve out time to keep myself sane for the many hours of incoming lab and course work. Letting sleep hours take a hit is an easy trap to fall into, and while some students swear its necessary, I think there are other ways to deal with a growing workload that are less burnout inducing.&lt;/p&gt;
@@ -115,10 +115,10 @@
     
     <item>
       <title>The Curious Case of Dunkin Doughnuts</title>
-      <link>https://kentsommer.github.io/blog/the-curious-case-of-dunkin-doughnuts/</link>
+      <link>https://kentsommer.xyz/blog/the-curious-case-of-dunkin-doughnuts/</link>
       <pubDate>Tue, 23 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://kentsommer.github.io/blog/the-curious-case-of-dunkin-doughnuts/</guid>
+      <guid>https://kentsommer.xyz/blog/the-curious-case-of-dunkin-doughnuts/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s 8:45 in the morning, sweat is already dripping down my back as the heat from the past few weeks still hasn&amp;rsquo;t cleared. Suddenly a familiar but unplaceable tune starts playing over the subway station speakers signaling that the train is almost here. As I, and everyone else, are jostled into place by the crowed moving onto the train I realize I haven&amp;rsquo;t had breakfast yet. Where do I finally end up you might ask? Well&amp;hellip; Dunkin Doughnuts of course! Now I know what you are all probably thinking&amp;hellip; Dunkin Doughnuts isn&amp;rsquo;t that great and in fact, may earn the title of pretty stinking bad. So, why would you go to the trouble?. Well, here is a little secret, it has basically nothing in common with the US version of the same store (other than both selling coffee and some semblance of treats). The doughnuts are actually delicious unlike their US counterparts, and the coffee is something comparable to Starbucks (that is to say not fantastic, but certainly not bad). How the US ended up with the subpar version is beyond me and to be honest rather outside of the scope of this blog, however, it does make you wonder.&lt;/p&gt;
 
 &lt;p&gt;While I did have a blast meandering around coffee shops and visiting a few popular places in Seoul, most of my time was spent on much less interesting topics like paperwork&amp;hellip; That being said, as of about six hours ago from publishing time of this post, I have finally been approved for my Alien Registration Card! It won&amp;rsquo;t come for another 2-3 weeks, but it is a huge burden off my back knowing that it is finished.&lt;/p&gt;
@@ -139,10 +139,10 @@
     
     <item>
       <title>Drones, Friends, and Navigation</title>
-      <link>https://kentsommer.github.io/blog/drones-friends-navigation/</link>
+      <link>https://kentsommer.xyz/blog/drones-friends-navigation/</link>
       <pubDate>Sun, 14 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://kentsommer.github.io/blog/drones-friends-navigation/</guid>
+      <guid>https://kentsommer.xyz/blog/drones-friends-navigation/</guid>
       <description>&lt;p&gt;Wednesday came and went and once evening hit I realized I had to switch things up. I had been letting myself worry about every small thing that needed to happen once I was on campus and how difficult everything would be once there&amp;hellip; it was eating away at me. I&amp;rsquo;ve never felt homesick before, but this was as close as I would ever like to get again. I tried to remember back to my last trip here to figure out what was causing it and came to the conclusion that I wasn&amp;rsquo;t keeping myself nearly busy enough this time around. Two years ago it was wheels down at 8PM on a Sunday and work for a solid three months starting at 7AM the following Monday. So, I went into &amp;ldquo;recovery&amp;rdquo; mode and started scheduling things left, right, and center. I got to play &amp;ldquo;uncle&amp;rdquo; two times this week, the first with the niece of a now great friend, and the second with Daniel&amp;rsquo;s kids at the Drone Racing World Cup on Sunday. I can understand why someone would want to have kids if these types of interactions were the only ones they experienced. You don&amp;rsquo;t ever have to say no, the kids love you, and generally it is just a pretty great time!&lt;/p&gt;
 
 &lt;p&gt;And now&amp;hellip; back to our regularly scheduled programming. Korea can be a beautiful and way less hectic place than you would ever think just visiting Seoul. I got to see scenic view after scenic view on my way down to the drone races on Sunday, mountains stretching up into the (what is probably pollution but let&amp;rsquo;s not worry too much about that) clouds in almost any direction you looked. Gone are the drab apartment buildings that stand to serve utility over all else and in its place a calm majestic landscape stretching as far as the eye can see. The day before this, I had the wonderful opportunity of visiting the Samsung Art Gallary which in a way almost prepared me for these new sights. Listening to the history behind each piece in the gallery, something I would normally find tedious, helped to place me in my new home. It also gave me a greater appreciation for the landscape of the trip I would take the following day.&lt;/p&gt;
@@ -155,10 +155,10 @@
     
     <item>
       <title>Getting Things Started</title>
-      <link>https://kentsommer.github.io/blog/getting-things-started/</link>
+      <link>https://kentsommer.xyz/blog/getting-things-started/</link>
       <pubDate>Fri, 05 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://kentsommer.github.io/blog/getting-things-started/</guid>
+      <guid>https://kentsommer.xyz/blog/getting-things-started/</guid>
       <description>&lt;p&gt;As I write this, I&amp;rsquo;m happy to say I am finally here in Korea and gazing off at the mountain view from my residence in Seoul. I walked around a bit yesterday which ended up being very nostalgic as memories of late night ramen trips, daily bus rides, and familiar places came floating back to me. It almost feels like I never left&amp;hellip; Over the past 48 hours, one thing has become increasingly apparent, though, I really need to step up my studying game for Korean. After being able to speak and understand most of the Swedish conversation with all of my great friends the two weeks prior to this journey, not being able to understand almost anything here feels much more alienating than my last trip as I didn&amp;rsquo;t realize how much I was missing by not being able to speak the language. That being said I have an updated and significantly more aggressive plan of attack for the language and plan to be to the intermediate / low vocab semi-fluency level by this time next year. Hard? Yes. Doable? Absolutely!&lt;/p&gt;
 
 &lt;p&gt;Last time I was here I ran into very few stumbling blocks, but since my trip is much longer, this time, I am finally getting to experience what I imagine it is like for someone to try to come to the US for school. That is lots of paperwork and a rather frustrating experience getting daily life things in order. Yesterday I went out fully expecting to get my bank account and phone plan setup, however, I came up feeling mildly defeated. It turns out that although I DO have an account still under my name from my trip two years ago, that account is on &amp;ldquo;hold&amp;rdquo; since I haven&amp;rsquo;t used it in over a year. And before you say &amp;ldquo;hey that&amp;rsquo;s great just show your passport / visa and get it re-opened,&amp;rdquo; I wish it was that simple. It turns out there have been some policy changes and due to this, I need proof of a need for a bank account. Being a student is ironically NOT an acceptable form of proof and instead, I would need to have a valid Alien Registration Card in order to open one. While this is somewhat of a non-issue as I have already signed up for my appointment with immigration to obtain one of these, it does put me in somewhat of a catch-22 for the next three weeks or so. Without the ARC (Alien Registration Card) I can&amp;rsquo;t get a bank account, without a bank account I can&amp;rsquo;t signup for phone service. Luckily having such great connections here has already paid off as I got some strings pulled and will be able to get a limited bank account setup which will allow me to signup for a phone plan on Monday.&lt;/p&gt;
@@ -171,10 +171,10 @@
     
     <item>
       <title>Preparations and History</title>
-      <link>https://kentsommer.github.io/blog/preparations-and-history/</link>
+      <link>https://kentsommer.xyz/blog/preparations-and-history/</link>
       <pubDate>Tue, 14 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://kentsommer.github.io/blog/preparations-and-history/</guid>
+      <guid>https://kentsommer.xyz/blog/preparations-and-history/</guid>
       <description>&lt;p&gt;If I was asked to imagine four years ago where I would be today, never in my wildest dreams would I imagine myself here, yet, here I am, 50 days out from one of the biggest adventures of my life. In 50 short days, I will be boarding a plane for South Korea where I will be spending at least the next two years of my life. Now, this begs the question, how did I get here? Well, to answer that let me go back to a little over two years ago when I set foot in Korea for the first time.&lt;/p&gt;
 
 &lt;p&gt;It was 6:00 PM and the plane had just landed at Incheon International Airport. I groggily made my way through security and picked up my bags after being awake for what felt like an eternity but was, in reality, only twenty-two hours or so. I was lucky enough to have a host family waiting for me right outside baggage claim and shortly thereafter (with the help of some coffee) found myself in the room I would call home for the next four months. Initially, I admit I was terrified&amp;hellip; new country, new people, a new language I couldn&amp;rsquo;t speak, new well&amp;hellip; everything. However, it didn&amp;rsquo;t take long before I started to realize that it was going to be hard to leave. Everything that was scary initially became everything I didn&amp;rsquo;t want to leave behind. Work was fascinating and sparked a new fire that would end up being the driving force for my decision to continue on to graduate studies after receiving my bachelor&amp;rsquo;s degree from the University of Minnesota. After returning home I knew I wanted to go back I just didn&amp;rsquo;t know how I would make it a reality. Quickly my mind turned to school again and I focused on my studies, however, this time, I focused on robotics and computer vision. Feeling like I finally found the field I wanted to spend my life exploring it was time to start thinking about the future. Looking back, I think it was incredibly short sighted of me to only apply to two graduate schools (KAIST and University of Helsinki), however, everything worked out somehow and I got into both. Having spent time in Korea and already hating the lack of sunlight during Minnesota&amp;rsquo;s winters I knew KAIST was where I wanted to spend the next leg of my academic journey.&lt;/p&gt;
