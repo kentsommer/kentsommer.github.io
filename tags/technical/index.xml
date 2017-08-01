@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Technical on Kent Sommer</title>
+    <link>http://kentsommer.com/tags/technical/</link>
+    <description>Recent content in Technical on Kent Sommer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016 Kent Sommer</copyright>
+    <lastBuildDate>Fri, 03 Feb 2017 12:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/technical/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>A Journey Through Platforms</title>
+      <link>http://kentsommer.com/post/a-journey-through-platforms/</link>
+      <pubDate>Fri, 03 Feb 2017 12:00:00 +0000</pubDate>
+      
+      <guid>http://kentsommer.com/post/a-journey-through-platforms/</guid>
+      <description>&lt;p&gt;So, it has been some time since my last post&amp;hellip; Before I get into the fun stuff (well&amp;hellip; fun for me anyways), let me give you a bit of a life update! Having already finished 1/4th of my masters, I can say with confidence that I am really happy that I decided to continue on and get an advanced degree. I&amp;rsquo;m able to work with world-class researchers on amazing topics doing work that has the potential to drastically improve people&amp;rsquo;s lives. If someone would have told me when I was in high school that this is the type of work I would be doing, I probably would have laughed at them. Not because I wouldn&amp;rsquo;t want to be doing it, but simply because at that time I thought there was no way I possibly could. It has taken until probably just a month or two ago for me to finally realize I&amp;rsquo;m actually capable of contributing meaningfully to research. Why it took so long to shake the constant feeling of imposters syndrome is something I probably will never know. I&amp;rsquo;ve struggled a lot with self-confidence in the past but just being in Korea and constantly overcoming challenges both academic and otherwise has really helped to put things into perspective and pushed me to grow a lot as a person.&lt;/p&gt;
+
+&lt;p&gt;Since finals have finished I&amp;rsquo;ve been working in the lab on a few projects, giving seminars on deep learning, and contributing back a bit to the open source community. I&amp;rsquo;m not actually sure what I am allowed to say publicly about the projects so I won&amp;rsquo;t go into much detail on those, however, I get to work with the Hubo lab (&lt;a href=&#34;https://www.google.co.kr/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=1&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=0ahUKEwiX-8_75_zRAhUIGJQKHU7rB8oQtwIIGDAA&amp;amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DBGOUSvaQcBs&amp;amp;usg=AFQjCNGsgOcG0NXTfl1TzgClCFSjn01elw&amp;amp;sig2=285L1YiiOgTdxRy52SL1ZQ&amp;amp;bvm=bv.146094739,d.dGc&#34; target=&#34;_blank&#34;&gt;the lab that won the DARPA 2015 Robotics Challenge&lt;/a&gt;) as well as a group from Seoul National University. The seminars have actually been a blast so far, and of course teaching always (most of the time) forces you to better understand the material yourself which is obviously beneficial to me. My professor suggested that three of us in the lab go through a deep learning textbook in detail and present on all of the chapters. Partially to help bring anyone in the lab who maybe wasn&amp;rsquo;t very familiar up to speed a bit, but also to just really solidify all the concepts for those of us giving the seminars. As for the open source work I&amp;rsquo;ve been doing, none of the code is novel, but rather helps to improve access to deep learning models by implementing them in more accessible frameworks (Keras for example).&lt;/p&gt;
+
+&lt;p&gt;The first two open source releases I made were implementations of a model called PoseNet. PoseNet was based on GoogLeNet and works by replacing the final and auxiliary fully connected layers (used for image classification) with regression outputs. When I say regression I mean that it outputs continuous values instead of a number within some set range (say 0 to 1000 where each number represents a class as in imagenet). As I said before I have two implementations available for PoseNet (the original author also has a Caffe implementation):&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/kentsommer/keras-posenet&#34; target=&#34;_blank&#34;&gt;Keras based implementation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/kentsommer/tensorflow-posenet&#34; target=&#34;_blank&#34;&gt;Tensorflow based implementation&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;More recently, after reading through Google&amp;rsquo;s paper on their latest version of the Inception architecture (Inception-V4), I decided it would be a good exercise to try and implement the model in Keras and port the weights that they released for TFslim (Tensorflow slim). This ended up taking up more of my time than I had originally intended, however, I learned a ton on the journey.&lt;/p&gt;
+
+&lt;p&gt;(Just a quick warning, the rest of this post will likely be rather technical although I will do my best to make it easy to understand)&lt;/p&gt;
+
+&lt;p&gt;The first large hurdle was that the pre-trained weights that Google released were in a ckpt (checkpoint) file which is the standard for Tensorflow but is also kind of a pain to use if you want to just get at the data (after all, we really just need the weights as arrays). After hacking together a really ugly solution to read the weights from the ckpt file and set them layer by layer into the Keras implementation of the model, I ran into my first bug (one that would drive me nuts for the better part of a day). No matter what I tried, the model always predicted the class of my test image horribly wrong (would classify an elephant as a toilet, etc&amp;hellip;). As I became more frustrated I finally started to hack up my model implementation to try and fix the issue. There ended up actually being three weird bugs:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;The first was that I had somehow missed that Batch Normalization was supposed to be applied after EVERY convolution layer.&lt;/li&gt;
+&lt;li&gt;The second was that for whatever reason, applying rectified linear unit activation before Batch Normalization drastically hurt performance. While the original papers that used Batch Normalization apply the layer activations after it, recent trends have been to apply activations first and the results &amp;ldquo;should&amp;rdquo; be really similar no matter what the order is. My guess is that I&amp;rsquo;m missing some information on why this caused such a large performance hit, so now that I&amp;rsquo;ve got everything working I&amp;rsquo;ll do some research on that topic.&lt;/li&gt;
+&lt;li&gt;The third and possibly most perplexing is that when using Batch Normalization, the biases in convolutional layers technically become &amp;ldquo;useless in the calculation.&amp;rdquo; So, I expected that allowing the biases in the convolutional layers to be initialized would not throw off the predictions by much (if at all). It turns out&amp;hellip; it does. Keras makes it easy luckily to simply remove the biases from convolutional layers, so after setting the &lt;code&gt;bias=False&lt;/code&gt; flag, everything finally worked.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;After hacking together some performance testing scripts to validate the accuracy of the model against the imagenet validation dataset, I was finally able to show equal quality results to that of the original model. And while I would like to say that was the end of it&amp;hellip; it wasn&amp;rsquo;t. Because Keras supports two backends (Theano and Tensorflow), and Theano implements the convolution operation differently than Tensorflow, the weights needed to be ported from the Tensorflow backend to the Theano backend. Converting the convolution kernels ends up being really easy though:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;from keras import backend as K
+from keras.utils.np_utils import convert_kernel
+
+for layer in model.layers:
+   if layer.__class__.__name__ in [&#39;Convolution1D&#39;, &#39;Convolution2D&#39;]:
+      original_w = K.get_value(layer.W)
+      converted_w = convert_kernel(original_w)
+      K.set_value(layer.W, converted_w)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This change allows you to switch the backends and use Theano! However, since Theano typically takes in images with the dimension ordering (channels, width, height), and Tensorflow takes in images with dimension ordering (width, height, channels) it is also necessary to do some weight matrix transposing magic to make everything work. This process is also pretty simple though:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;for index, layer in enumerate(layers):
+    if th_layer.__class__.__name__ in conv_classes:
+        weights = weights_list[index]
+        weights[0] = weights[0].transpose((3,2,0,1))
+        layer.set_weights(weights)
+        print(&#39;converted &#39;, layer.name)
+    else:
+        layer.set_weights(weights_list[index])
+        print(&#39;set: &#39;, layer.name)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The only bit that tripped me up initially is that the author or Keras had mentioned in a &lt;a href=&#34;https://groups.google.com/forum/#!searchin/keras-users/convert$20weights$20tensorflow%7Csort:relevance/keras-users/E1W4HpuxxFw/B2DCDluTCwAJ&#34; target=&#34;_blank&#34;&gt;google forums post&lt;/a&gt; that it is also necessary to row shuffle the weights of the first fully connected layer. I ended up not needing to do this, and I&amp;rsquo;m not exactly sure why it was mentioned as necessary originally. However, it did cause me to go on a wild goose chase looking for a solution to a problem I didn&amp;rsquo;t have. Finally, I deduced the row shuffling was unnecessary, fixed the last (stupidly simple) remaining bug and everything &amp;ldquo;just worked.&amp;rdquo; Given a picture of an elephant as input, for instance, you would get the following (assuming you use the same image of an elephant I did):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Loaded Model Weights!
+Class is: African elephant, Loxodonta africana
+Certainty is: 0.868498
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you are interested in playing around with the model (I promise it doesn&amp;rsquo;t bite!), feel free to get it &lt;a href=&#34;https://github.com/kentsommer/keras-inceptionV4&#34; target=&#34;_blank&#34;&gt;from here&lt;/a&gt;! The takeaway from this whole adventure for me has been a much better understanding of the implementation differences between Theano and Tensorflow. Although frustrating at times, it was a really fun experience and if I have some more free time I wouldn&amp;rsquo;t mind porting some other popular models to Keras or any other framework. So&amp;hellip; if you have any ideas, leave a comment or shoot me an email and I&amp;rsquo;d be happy to look into porting it!&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s all, for now, folks!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tensors, Baseball, and a whole lot of fun</title>
+      <link>http://kentsommer.com/post/tensors-baseball-fun/</link>
+      <pubDate>Tue, 20 Sep 2016 12:00:00 +0000</pubDate>
+      
+      <guid>http://kentsommer.com/post/tensors-baseball-fun/</guid>
+      <description>&lt;p&gt;It has taken a while for me to really feel settled in here, but I think I&amp;rsquo;ve finally crossed that line and I&amp;rsquo;m starting to feel really blessed to be here.&lt;/p&gt;
+
+&lt;p&gt;The last couple weeks have been an absolute blast and given the fact that I basically get to build cool things every day, so should the rest of my time here. As far as classes go&amp;hellip; I can&amp;rsquo;t really pick out many differences so far compared to the structure of similar graduate level courses in the US. Perhaps in some classes, there is a bit more emphasis on fact memorization, but even that seems to be within the bounds of normal. I&amp;rsquo;ve mentioned this to a few people now whenever they ask what the big differences between the US and Korea are, but it is actually really hard to say. Once you step off the plane, everything is so radically different and yet so easy to become accustomed to that you hardly realize the changes in lifestyle or cultural behavior. In that sense, I think Korea is a great tourist destination not because it is easy to get around without knowing the language (it isn&amp;rsquo;t&amp;hellip; it is actually pretty hard), but simply because you get used to the radical differences extremely quickly.&lt;/p&gt;
+
+&lt;p&gt;Now, you probably read the title of this post and by this point, you are thinking what in the world does any of this have to do with tensors, to which the obvious answer is&amp;hellip; absolutely nothing. But, let&amp;rsquo;s change that. Not too terribly long ago, Google released its machine learning library &amp;ldquo;TensorFlow&amp;rdquo;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;TensorFlow™ is an open source software library for numerical computation using data flow graphs. Nodes in the graph represent mathematical operations, while the graph edges represent the multidimensional data arrays (tensors) communicated between them.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This library is not dissimilar to other machine learning libraries such as Caffe, Theano, etc., however, since it is new and probably most importantly required for use in a homework assignment, it is the library I am using at the moment. Machine learning has recently gotten a lot of attention in the area of Computer Vision for achieving really awesome results for tasks such as object/place recognition, and image captioning. My foray into TensorFlow (due to the homework assignment) has been focused on image retrieval using CNN (Convolutional Neural Network) features. Given a pre-trained VGG16 network as shown here:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://kentsommer.com/img/posts/vgg16.png&#34; alt=&#34;alternative text for search engines&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you use the second 1x1x4096 fully connected layer (fc2) as a feature vector on a given query image, and then again pull out the fc2 feature vector on each image in some set that is known to contain similar or identical images (even those taken at different angles or scales), it becomes possible to match the feature vectors (using some similarity measurement) and retrieve pictures of the same image or similar ones. While this approach is naive, and if running solely on a CPU it is also stupidly slow (for 250 query images and a test set of 1000 it takes 29.86 hours to run), it still manages to achieve very acceptable results. Do note, this would be orders of magnitude faster given a GPU with enough vRAM, however, my measly 2GB card runs out of memory on this task. All of that being said, the precision achieved is actually impressive. It is able to achieve 92% accuracy when trying to match the closest 4 images in the test dataset to some image category in the query dataset.&lt;/p&gt;
+
+&lt;p&gt;While this work is barely scratching the surface of what is currently possible using machine learning, it is still extremely impressive compared with the past work in image matching using hand crafted features (SIFT, SURF, ORB, etc).&lt;/p&gt;
+
+&lt;p&gt;Source code for the above: &lt;a href=&#34;https://github.com/kentsommer/VGG16-Image-Retrieval&#34; target=&#34;_blank&#34;&gt;https://github.com/kentsommer/VGG16-Image-Retrieval&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now&amp;hellip; baseball. Anyone who knows me is aware of the fact that I&amp;rsquo;ve never particularly liked watching baseball mainly due to the fact that there just simply isn&amp;rsquo;t a heck of a lot happening most of the time. I&amp;rsquo;m sure it is fun to play, just not the quickest paced spectator sport. Well, let me tell you, watching baseball in Korea flips that idea on its head. While the game itself is still slow, you can&amp;rsquo;t focus on that most of the time because the bits where nothing is happening are all filled with syncronized cheering, chanting, and dancing. Every time &amp;ldquo;your team&amp;rdquo; is up to bat, the cheering man (for lack of a better description) gets up on a stage and starts directing. These chants/cheers are also distinctly different from the US style of cheerleading songs mainly because they are very specific to whoever is batting. Each player has their own &amp;ldquo;theme-song&amp;rdquo; if not multiple songs. Everyone, and I mean EVERYONE sings along and waves their hands about. It is a blast and the energy is greater than that of almost any professional sports game I&amp;rsquo;ve been to in the US (granted its a pretty small sample size&amp;hellip;). If you ever come to Korea make sure to try to catch a baseball game (and bring a Korean friend with who can help guide you with what you are supposed to be chanting) even if you aren&amp;rsquo;t a huge fan of the game normally. Here is a short clip of the crowd after the team we were cheering for hit a homerun to finish off the game and win (and yes I know it is stupid that I recorded it vertically but hey it is in 4K!):&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/-3izxpVzTZM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+</description>
+    </item>
+    
+  </channel>
+</rss>

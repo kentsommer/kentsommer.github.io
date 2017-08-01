@@ -1,42 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kent Sommer on Kent Sommer</title>
-    <link>http://kentsommer.com/</link>
-    <description>Recent content in Kent Sommer on Kent Sommer</description>
+    <title>Posts on Kent Sommer</title>
+    <link>http://kentsommer.com/post/</link>
+    <description>Recent content in Posts on Kent Sommer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Kent Sommer</copyright>
-    <lastBuildDate>Tue, 01 Aug 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Towards accurate kidnap resolution through deep learning</title>
-      <link>http://kentsommer.com/publication/kidnap-resolution-through-deep-learning/</link>
-      <pubDate>Thu, 27 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kentsommer.com/publication/kidnap-resolution-through-deep-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Towards Accurate Kidnap Resolution Through Deep Learning</title>
-      <link>http://kentsommer.com/talk/example-talk/</link>
-      <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kentsommer.com/talk/example-talk/</guid>
-      <description>&lt;script async class=&#39;speakerdeck-embed&#39; data-id=&#39;9cbef01c3a4c4f8093e7e985491f58ac&#39; data-ratio=&#39;1.33333333333333&#39; src=&#39;//speakerdeck.com/assets/embed.js&#39;&gt;&lt;/script&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Value Iteration Networks</title>
-      <link>http://kentsommer.com/project/pytorch-vin/</link>
-      <pubDate>Thu, 20 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kentsommer.com/project/pytorch-vin/</guid>
-      <description></description>
-    </item>
+    <lastBuildDate>Fri, 03 Feb 2017 12:00:00 +0000</lastBuildDate>
+    <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>A Journey Through Platforms</title>
@@ -103,24 +75,6 @@ Certainty is: 0.868498
 
 &lt;p&gt;That&amp;rsquo;s all, for now, folks!&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Inception V4</title>
-      <link>http://kentsommer.com/project/keras-inceptionv4/</link>
-      <pubDate>Thu, 26 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://kentsommer.com/project/keras-inceptionv4/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Touch Location Inference (Side Channel Attack)</title>
-      <link>http://kentsommer.com/project/web-based-touch-inference/</link>
-      <pubDate>Mon, 19 Dec 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://kentsommer.com/project/web-based-touch-inference/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -266,15 +220,6 @@ Certainty is: 0.868498
 
 &lt;p&gt;There is definitely a lot that still needs to be done. First and foremost, I need to actually figure what in the world to pack, two years is a long time and I&amp;rsquo;ve never been great a planning that far ahead. My Visa application still needs to be sent off among a myriad of other paperwork that I need to finish. While it all feels a little overwhelming at the moment, that doesn&amp;rsquo;t even begin to cast a shadow over the excitement of beginning life in a new country.&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>3D Object Reconstruction</title>
-      <link>http://kentsommer.com/project/3d-object-reconstruction/</link>
-      <pubDate>Sat, 16 May 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://kentsommer.com/project/3d-object-reconstruction/</guid>
-      <description></description>
     </item>
     
   </channel>

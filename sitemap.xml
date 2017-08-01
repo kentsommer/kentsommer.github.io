@@ -1,60 +1,286 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
-  <url>
-    <loc>https://kentsommer.xyz/</loc>
-    <lastmod>2017-02-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/publication/kidnap-resolution-through-deep-learning/</loc>
+      <lastmod>2017-07-27T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://kentsommer.xyz/blog/a-journey-through-platforms/</loc>
-    <lastmod>2017-02-03T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/talk/example-talk/</loc>
+      <lastmod>2017-05-30T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://kentsommer.xyz/blog/winter-is-coming/</loc>
-    <lastmod>2016-10-28T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/project/pytorch-vin/</loc>
+      <lastmod>2017-04-20T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://kentsommer.xyz/projects/1/</loc>
-    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/post/a-journey-through-platforms/</loc>
+      <lastmod>2017-02-03T12:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://kentsommer.xyz/projects/</loc>
-    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/project/keras-inceptionv4/</loc>
+      <lastmod>2017-01-26T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://kentsommer.xyz/blog/tensors-baseball-fun/</loc>
-    <lastmod>2016-09-20T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/tags/academic/</loc>
+      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://kentsommer.xyz/blog/reality-sets-in/</loc>
-    <lastmod>2016-08-31T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/publication/</loc>
+      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://kentsommer.xyz/blog/the-curious-case-of-dunkin-doughnuts/</loc>
-    <lastmod>2016-08-23T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/talk/</loc>
+      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://kentsommer.xyz/blog/drones-friends-navigation/</loc>
-    <lastmod>2016-08-14T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/project/web-based-touch-inference/</loc>
+      <lastmod>2016-12-19T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://kentsommer.xyz/blog/getting-things-started/</loc>
-    <lastmod>2016-08-05T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/post/winter-is-coming/</loc>
+      <lastmod>2016-10-28T12:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://kentsommer.xyz/blog/preparations-and-history/</loc>
-    <lastmod>2016-06-14T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/post/tensors-baseball-fun/</loc>
+      <lastmod>2016-09-20T12:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/post/reality-sets-in/</loc>
+      <lastmod>2016-08-31T12:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/post/the-curious-case-of-dunkin-doughnuts/</loc>
+      <lastmod>2016-08-23T12:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/post/drones-friends-navigation/</loc>
+      <lastmod>2016-08-14T12:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/post/getting-things-started/</loc>
+      <lastmod>2016-08-05T12:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/post/preparations-and-history/</loc>
+      <lastmod>2016-06-14T12:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/project/3d-object-reconstruction/</loc>
+      <lastmod>2015-05-16T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/publication_types/1/</loc>
+      <lastmod>2017-07-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/categories/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/tags/computer-security/</loc>
+      <lastmod>2016-12-19T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/tags/computer-vision/</loc>
+      <lastmod>2015-05-16T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/tags/deep-learning/</loc>
+      <lastmod>2017-04-20T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/</loc>
+      <lastmod>2017-08-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/tags/life-abroad/</loc>
+      <lastmod>2017-02-03T12:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/tags/machine-learning/</loc>
+      <lastmod>2016-12-19T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/post/</loc>
+      <lastmod>2017-02-03T12:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/project/</loc>
+      <lastmod>2017-04-20T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/publication_types/</loc>
+      <lastmod>2017-07-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/tags/</loc>
+      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://kentsommer.com/tags/technical/</loc>
+      <lastmod>2017-02-03T12:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
   
 </urlset>
