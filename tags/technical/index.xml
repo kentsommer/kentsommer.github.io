@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Technical on Kent Sommer</title>
-    <link>http://kentsommer.com/tags/technical/</link>
+    <link>https://kentsommer.com/tags/technical/</link>
     <description>Recent content in Technical on Kent Sommer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>A Journey Through Platforms</title>
-      <link>http://kentsommer.com/post/a-journey-through-platforms/</link>
+      <link>https://kentsommer.com/post/a-journey-through-platforms/</link>
       <pubDate>Fri, 03 Feb 2017 12:00:00 +0000</pubDate>
       
-      <guid>http://kentsommer.com/post/a-journey-through-platforms/</guid>
+      <guid>https://kentsommer.com/post/a-journey-through-platforms/</guid>
       <description>&lt;p&gt;So, it has been some time since my last post&amp;hellip; Before I get into the fun stuff (well&amp;hellip; fun for me anyways), let me give you a bit of a life update! Having already finished 1/4th of my masters, I can say with confidence that I am really happy that I decided to continue on and get an advanced degree. I&amp;rsquo;m able to work with world-class researchers on amazing topics doing work that has the potential to drastically improve people&amp;rsquo;s lives. If someone would have told me when I was in high school that this is the type of work I would be doing, I probably would have laughed at them. Not because I wouldn&amp;rsquo;t want to be doing it, but simply because at that time I thought there was no way I possibly could. It has taken until probably just a month or two ago for me to finally realize I&amp;rsquo;m actually capable of contributing meaningfully to research. Why it took so long to shake the constant feeling of imposters syndrome is something I probably will never know. I&amp;rsquo;ve struggled a lot with self-confidence in the past but just being in Korea and constantly overcoming challenges both academic and otherwise has really helped to put things into perspective and pushed me to grow a lot as a person.&lt;/p&gt;
 
 &lt;p&gt;Since finals have finished I&amp;rsquo;ve been working in the lab on a few projects, giving seminars on deep learning, and contributing back a bit to the open source community. I&amp;rsquo;m not actually sure what I am allowed to say publicly about the projects so I won&amp;rsquo;t go into much detail on those, however, I get to work with the Hubo lab (&lt;a href=&#34;https://www.google.co.kr/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=1&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=0ahUKEwiX-8_75_zRAhUIGJQKHU7rB8oQtwIIGDAA&amp;amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DBGOUSvaQcBs&amp;amp;usg=AFQjCNGsgOcG0NXTfl1TzgClCFSjn01elw&amp;amp;sig2=285L1YiiOgTdxRy52SL1ZQ&amp;amp;bvm=bv.146094739,d.dGc&#34; target=&#34;_blank&#34;&gt;the lab that won the DARPA 2015 Robotics Challenge&lt;/a&gt;) as well as a group from Seoul National University. The seminars have actually been a blast so far, and of course teaching always (most of the time) forces you to better understand the material yourself which is obviously beneficial to me. My professor suggested that three of us in the lab go through a deep learning textbook in detail and present on all of the chapters. Partially to help bring anyone in the lab who maybe wasn&amp;rsquo;t very familiar up to speed a bit, but also to just really solidify all the concepts for those of us giving the seminars. As for the open source work I&amp;rsquo;ve been doing, none of the code is novel, but rather helps to improve access to deep learning models by implementing them in more accessible frameworks (Keras for example).&lt;/p&gt;
@@ -79,10 +79,10 @@ Certainty is: 0.868498
     
     <item>
       <title>Tensors, Baseball, and a whole lot of fun</title>
-      <link>http://kentsommer.com/post/tensors-baseball-fun/</link>
+      <link>https://kentsommer.com/post/tensors-baseball-fun/</link>
       <pubDate>Tue, 20 Sep 2016 12:00:00 +0000</pubDate>
       
-      <guid>http://kentsommer.com/post/tensors-baseball-fun/</guid>
+      <guid>https://kentsommer.com/post/tensors-baseball-fun/</guid>
       <description>&lt;p&gt;It has taken a while for me to really feel settled in here, but I think I&amp;rsquo;ve finally crossed that line and I&amp;rsquo;m starting to feel really blessed to be here.&lt;/p&gt;
 
 &lt;p&gt;The last couple weeks have been an absolute blast and given the fact that I basically get to build cool things every day, so should the rest of my time here. As far as classes go&amp;hellip; I can&amp;rsquo;t really pick out many differences so far compared to the structure of similar graduate level courses in the US. Perhaps in some classes, there is a bit more emphasis on fact memorization, but even that seems to be within the bounds of normal. I&amp;rsquo;ve mentioned this to a few people now whenever they ask what the big differences between the US and Korea are, but it is actually really hard to say. Once you step off the plane, everything is so radically different and yet so easy to become accustomed to that you hardly realize the changes in lifestyle or cultural behavior. In that sense, I think Korea is a great tourist destination not because it is easy to get around without knowing the language (it isn&amp;rsquo;t&amp;hellip; it is actually pretty hard), but simply because you get used to the radical differences extremely quickly.&lt;/p&gt;
@@ -95,7 +95,7 @@ Certainty is: 0.868498
 
 &lt;p&gt;This library is not dissimilar to other machine learning libraries such as Caffe, Theano, etc., however, since it is new and probably most importantly required for use in a homework assignment, it is the library I am using at the moment. Machine learning has recently gotten a lot of attention in the area of Computer Vision for achieving really awesome results for tasks such as object/place recognition, and image captioning. My foray into TensorFlow (due to the homework assignment) has been focused on image retrieval using CNN (Convolutional Neural Network) features. Given a pre-trained VGG16 network as shown here:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://kentsommer.com/img/posts/vgg16.png&#34; alt=&#34;alternative text for search engines&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://kentsommer.com/img/posts/vgg16.png&#34; alt=&#34;alternative text for search engines&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;If you use the second 1x1x4096 fully connected layer (fc2) as a feature vector on a given query image, and then again pull out the fc2 feature vector on each image in some set that is known to contain similar or identical images (even those taken at different angles or scales), it becomes possible to match the feature vectors (using some similarity measurement) and retrieve pictures of the same image or similar ones. While this approach is naive, and if running solely on a CPU it is also stupidly slow (for 250 query images and a test set of 1000 it takes 29.86 hours to run), it still manages to achieve very acceptable results. Do note, this would be orders of magnitude faster given a GPU with enough vRAM, however, my measly 2GB card runs out of memory on this task. All of that being said, the precision achieved is actually impressive. It is able to achieve 92% accuracy when trying to match the closest 4 images in the test dataset to some image category in the query dataset.&lt;/p&gt;
 

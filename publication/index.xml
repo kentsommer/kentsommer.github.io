@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publications on Kent Sommer</title>
-    <link>http://kentsommer.com/publication/</link>
+    <link>https://kentsommer.com/publication/</link>
     <description>Recent content in Publications on Kent Sommer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Towards accurate kidnap resolution through deep learning</title>
-      <link>http://kentsommer.com/publication/kidnap-resolution-through-deep-learning/</link>
+      <link>https://kentsommer.com/publication/kidnap-resolution-through-deep-learning/</link>
       <pubDate>Thu, 27 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://kentsommer.com/publication/kidnap-resolution-through-deep-learning/</guid>
+      <guid>https://kentsommer.com/publication/kidnap-resolution-through-deep-learning/</guid>
       <description></description>
     </item>
     
