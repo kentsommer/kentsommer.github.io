@@ -7,8 +7,54 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Kent Sommer</copyright>
-    <lastBuildDate>Fri, 03 Feb 2017 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 Sep 2017 12:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/technical/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Recovering Arch Linux after a side-by-side install</title>
+      <link>https://kentsommer.com/post/recovering-arch-linux-ubuntu/</link>
+      <pubDate>Tue, 12 Sep 2017 12:00:00 +0000</pubDate>
+      
+      <guid>https://kentsommer.com/post/recovering-arch-linux-ubuntu/</guid>
+      <description>&lt;p&gt;If another OS (also *nix based) is installed alongside arch, grub will likely get messed up on the arch side of things. Grub will see the arch linux boot option, however, upon startup it will throw a kernel panic with the error:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;Not syncing: VFS
+Unable to mount root fs on unknown-block.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is caused by a bug in the way some other linux distros generate the grub.cfg file. If you have the above error, your grub.cfg arch linux entry will likely look like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;initrd /boot/intel-ucode.img
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It should be:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;initrd /boot/intel-ucode.img /boot/initramfs-linux.img
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So here is how to fix it:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Boot to grub and press &lt;code&gt;e&lt;/code&gt; over the Arch linux boot entry to edit it&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;/boot/initramfs-linux.img&lt;/code&gt; to the line starting with &lt;code&gt;initrd&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Boot with above changes (probably &lt;code&gt;F10&lt;/code&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The above steps allow you to boot into arch linux, however, currently that edit has to be made everytime you want to boot arch. To fix this do the following:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Ensure os-prober is installed: &lt;code&gt;sudo pacman -S os-prober&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;sudo grub-mkconfig -o /boot/grub/grub.cfg&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;sudo grub-install /dev/sda&lt;/code&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Note: replace &lt;code&gt;/dev/sda&lt;/code&gt; with your boot drive if it is different&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;These commands will generate a new grub.cfg file and also gives arch linux control of grub again. This ensures that the arch linux boot entry will always be correct!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>A Journey Through Platforms</title>
