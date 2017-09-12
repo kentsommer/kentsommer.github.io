@@ -52,7 +52,7 @@ Unable to mount root fs on unknown-block.
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;These commands will generate a new grub.cfg file and also gives arch linux control of grub again. This ensures that the arch linux boot entry will always be correct!&lt;/p&gt;
+&lt;p&gt;These commands will generate a new grub.cfg file and also give arch linux control of grub again. This ensures that the arch linux boot entry will always be correct!&lt;/p&gt;
 </description>
     </item>
     
