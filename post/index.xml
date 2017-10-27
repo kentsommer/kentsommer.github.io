@@ -7,8 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Kent Sommer</copyright>
-    <lastBuildDate>Tue, 12 Sep 2017 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Oct 2017 12:00:00 +0000</lastBuildDate>
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>HireVue: Misapplied Machine Learning</title>
+      <link>https://kentsommer.com/post/hirevue-misapplied-machine-learning/</link>
+      <pubDate>Thu, 26 Oct 2017 12:00:00 +0000</pubDate>
+      
+      <guid>https://kentsommer.com/post/hirevue-misapplied-machine-learning/</guid>
+      <description>&lt;p&gt;Behavioral interviews are about showing your interviewer how you respond in a variety of situations. But beyond that, they help give the interviewer a sense of who you are and if you have a good &amp;ldquo;culture fit&amp;rdquo; with the company. At a really high level then, behavioral interviews are about people.&lt;/p&gt;
+
+&lt;p&gt;It came as a bit of a shock then to hear about the interview experience of a few colleagues who encountered the video interview process created by &lt;a href=&#34;https://www.hirevue.com/&#34; target=&#34;_blank&#34;&gt;HireVue&lt;/a&gt;. All of my colleagues had roughly the same experience: tailor their resume and cover letter, prepare references, submit everything, eventually receive an email asking them to partake in a video interview.&lt;/p&gt;
+
+&lt;p&gt;I think it is important to note that up until this point, the only person (if any) they have spoken to, is a recruiter. So, they do the video interview and then sit back and wait. What they did not know at the time is that not a single actual person will review their answers. Instead, HireVue applies machine learning to their responses and judges them based on factors such as tone, body language, content, and my personal favorite&amp;hellip; eye contact. What eye are they supposed to be looking at again?&lt;/p&gt;
+
+&lt;p&gt;These factors are then run through HireVue&amp;rsquo;s system and matched to some baseline interviews that the company pre-recorded (sample interviews with ideal candidates if you will). It then ranks all the applications and spits the list out to HR who can now say they are &amp;ldquo;processing&amp;rdquo; a much higher number of applications than they could before. Efficiency! But wait&amp;hellip; that &amp;ldquo;processing&amp;rdquo; term is rather important. They aren&amp;rsquo;t &amp;ldquo;reviewing&amp;rdquo; candidates or &amp;ldquo;speaking&amp;rdquo; with candidates, they are &amp;ldquo;processing&amp;rdquo; them. If HR is &amp;ldquo;processing&amp;rdquo; 2,000 candidates, what they get at the end is the same thing every other company running HireVue gets.&lt;/p&gt;
+
+&lt;p&gt;Selecting people is inherently personal. Not meeting talent for interviews is like trying to get your sales department to close deals without making phone calls. It just isn&amp;rsquo;t going to end up well.&lt;/p&gt;
+
+&lt;p&gt;The lesson in all of this is that just because machine learning (or any technology) can be applied to some area, does not mean that it should be. Hiring is about people, the moment a company takes people out of that equation is the moment they start down the path of destroying any idea of &amp;ldquo;company culture&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;My advice, unless you aren&amp;rsquo;t in a place in your career where you can afford to say &amp;ldquo;no thanks&amp;rdquo;&amp;hellip; Respectfully turn down the invitation to continue with the hiring process. All that company is telling you by asking you to go through a system like HireVue is that they don&amp;rsquo;t value you.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Recovering Arch Linux after a side-by-side install</title>
