@@ -6,9 +6,11 @@
     <description>Recent content in Publication_types on Kent Sommer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2016 Kent Sommer</copyright>
+    <copyright>&amp;copy; 2021 Kent Sommer</copyright>
     <lastBuildDate>Thu, 27 Jul 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/publication_types/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://kentsommer.com/publication_types/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>1</title>

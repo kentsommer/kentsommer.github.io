@@ -6,9 +6,11 @@
     <description>Recent content in Deep Learning on Kent Sommer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2016 Kent Sommer</copyright>
+    <copyright>&amp;copy; 2021 Kent Sommer</copyright>
     <lastBuildDate>Thu, 20 Apr 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/deep-learning/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://kentsommer.com/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Value Iteration Networks</title>
