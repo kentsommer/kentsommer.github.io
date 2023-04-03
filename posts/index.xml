@@ -31,26 +31,26 @@
 <li>The third and possibly most perplexing is that when using Batch Normalization, the biases in convolutional layers technically become &ldquo;useless in the calculation.&rdquo; So, I expected that allowing the biases in the convolutional layers to be initialized would not throw off the predictions by much (if at all). It turns out&hellip; it does. Keras makes it easy luckily to simply remove the biases from convolutional layers, so after setting the <code>bias=False</code> flag, everything finally worked.</li>
 </ol>
 <p>After hacking together some performance testing scripts to validate the accuracy of the model against the imagenet validation dataset, I was finally able to show equal quality results to that of the original model. And while I would like to say that was the end of it&hellip; it wasn&rsquo;t. Because Keras supports two backends (Theano and Tensorflow), and Theano implements the convolution operation differently than Tensorflow, the weights needed to be ported from the Tensorflow backend to the Theano backend. Converting the convolution kernels ends up being really easy though:</p>
-<pre><code>from keras import backend as K
+<pre tabindex="0"><code>from keras import backend as K
 from keras.utils.np_utils import convert_kernel
 
 for layer in model.layers:
-   if layer.__class__.__name__ in ['Convolution1D', 'Convolution2D']:
+   if layer.__class__.__name__ in [&#39;Convolution1D&#39;, &#39;Convolution2D&#39;]:
       original_w = K.get_value(layer.W)
       converted_w = convert_kernel(original_w)
       K.set_value(layer.W, converted_w)
 </code></pre><p>This change allows you to switch the backends and use Theano! However, since Theano typically takes in images with the dimension ordering (channels, width, height), and Tensorflow takes in images with dimension ordering (width, height, channels) it is also necessary to do some weight matrix transposing magic to make everything work. This process is also pretty simple though:</p>
-<pre><code>for index, layer in enumerate(layers):
+<pre tabindex="0"><code>for index, layer in enumerate(layers):
     if th_layer.__class__.__name__ in conv_classes:
         weights = weights_list[index]
         weights[0] = weights[0].transpose((3,2,0,1))
         layer.set_weights(weights)
-        print('converted ', layer.name)
+        print(&#39;converted &#39;, layer.name)
     else:
         layer.set_weights(weights_list[index])
-        print('set: ', layer.name)
+        print(&#39;set: &#39;, layer.name)
 </code></pre><p>The only bit that tripped me up initially is that the author or Keras had mentioned in a <a href="https://groups.google.com/forum/#!searchin/keras-users/convert$20weights$20tensorflow%7Csort:relevance/keras-users/E1W4HpuxxFw/B2DCDluTCwAJ">google forums post</a> that it is also necessary to row shuffle the weights of the first fully connected layer. I ended up not needing to do this, and I&rsquo;m not exactly sure why it was mentioned as necessary originally. However, it did cause me to go on a wild goose chase looking for a solution to a problem I didn&rsquo;t have. Finally, I deduced the row shuffling was unnecessary, fixed the last (stupidly simple) remaining bug and everything &ldquo;just worked.&rdquo; Given a picture of an elephant as input, for instance, you would get the following (assuming you use the same image of an elephant I did):</p>
-<pre><code>Loaded Model Weights!
+<pre tabindex="0"><code>Loaded Model Weights!
 Class is: African elephant, Loxodonta africana
 Certainty is: 0.868498
 </code></pre><p>If you are interested in playing around with the model (I promise it doesn&rsquo;t bite!), feel free to get it <a href="https://github.com/kentsommer/keras-inceptionV4">from here</a>! The takeaway from this whole adventure for me has been a much better understanding of the implementation differences between Theano and Tensorflow. Although frustrating at times, it was a really fun experience and if I have some more free time I wouldn&rsquo;t mind porting some other popular models to Keras or any other framework. So&hellip; if you have any ideas, leave a comment or shoot me an email and I&rsquo;d be happy to look into porting it!</p>
